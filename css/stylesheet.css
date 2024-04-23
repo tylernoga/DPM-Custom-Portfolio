@@ -1,0 +1,124 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+header h1 {
+    color: white; 
+}
+header, footer {
+    background-color: #333; 
+    color: #ffffff; 
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Custom styles */
+section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+
+.about-section,
+.interests-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-section .text,
+.interests-section .text {
+    flex: 1;
+}
+
+.about-section .image,
+.interests-section .image {
+    flex: 0 0 auto;
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.image img {
+    max-width: 200px; /* Adjust max-width as needed */
+    height: auto;
+    float: right;
+}
