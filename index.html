@@ -23,6 +23,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="page2.html">Projects</a></li>
                 <li><a href="https://www.linkedin.com/in/tyler-noga/">LinkedIn</a></li>
+                <li><a href="https://github.com/tylernoga">GitHub</a></li>
                 <li><a href="Static/Documents/Tyler-Noga-Resume-2024.pdf" target="_blank">Resume</a></li>
             </ul>
         </nav>
@@ -84,7 +85,36 @@
         </section>
     </main>
 
+    <div class="cookie-popup" id="cookie-popup">
+        <p>This website uses cookies to ensure you get the best experience on our website. We use Google Analytics to track site usage. View our <a href="/cookie-policy.html">Cookie Policy for more information.</a></p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var cookiePopup = document.getElementById('cookie-popup');
+        var acceptCookiesBtn = document.getElementById('accept-cookies');
+
+        // Check if the user has already accepted the cookies
+        var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+        if (!cookiesAccepted) {
+            cookiePopup.style.display = 'block';
+        }
+
+        // Event listener for accept cookies button
+        acceptCookiesBtn.addEventListener('click', function() {
+            // Set a local storage item to remember that the user accepted cookies
+            localStorage.setItem('cookiesAccepted', 'true');
+            // Hide the cookie popup
+            cookiePopup.style.display = 'none';
+        });
+    });
+</script>
+    
+
     <footer>
+        <a href="/cookie-policy.html">Cookie Policy</a>
         <p>&copy; 2024 Tyler Noga</p>
     </footer>
 </body>
