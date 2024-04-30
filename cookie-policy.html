@@ -19,6 +19,10 @@
         .cookie-policy-link {
             margin-top: 20px;
         }
+
+        .back-button {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +41,16 @@
         <div class="cookie-policy-link">
             <p>For more information about Google Analytics cookies and how Google safeguards your data, please visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google's Privacy & Terms</a>.</p>
         </div>
+
+        <div class="back-button">
+            <button onclick="goBack()">Back</button>
+        </div>
     </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
