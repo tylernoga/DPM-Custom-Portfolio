@@ -122,3 +122,8 @@ tr:hover {
     height: auto;
     float: right;
 }
+
+footer a,
+footer p {
+    color: white;
+}
