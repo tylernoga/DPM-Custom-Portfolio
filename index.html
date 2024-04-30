@@ -19,8 +19,9 @@
     .cookie-popup {
         display: none;
         position: fixed;
-        bottom: 20px;
-        left: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: #f0f0f0;
         padding: 20px;
         border-radius: 5px;
@@ -31,6 +32,7 @@
     .cookie-popup p {
         margin: 0;
     }
+</style>
 </style>
 </head>
 <body>
@@ -104,31 +106,32 @@
     </main>
 
     <div class="cookie-popup" id="cookie-popup">
-        <p>This website uses cookies to ensure you get the best experience on our website. We use Google Analytics to track site usage. For more information view our <a href="/cookie-policy.html">Cookie Policy for more information.</a></p>
+        <p>This website uses cookies to ensure you get the best experience on our website. We use Google Analytics to track site usage. For more information veiw our <a href="/cookie-policy.html">Cookie Policy.</a></p>
         <button id="accept-cookies">Accept</button>
     </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var cookiePopup = document.getElementById('cookie-popup');
-        var acceptCookiesBtn = document.getElementById('accept-cookies');
-
-        // Check if the user has already accepted the cookies
-        var cookiesAccepted = localStorage.getItem('cookiesAccepted');
-
-        if (!cookiesAccepted) {
-            cookiePopup.style.display = 'block';
-        }
-
-        // Event listener for accept cookies button
-        acceptCookiesBtn.addEventListener('click', function() {
-            // Set a local storage item to remember that the user accepted cookies
-            localStorage.setItem('cookiesAccepted', 'true');
-            // Hide the cookie popup
-            cookiePopup.style.display = 'none';
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var cookiePopup = document.getElementById('cookie-popup');
+            var acceptCookiesBtn = document.getElementById('accept-cookies');
+    
+            // Check if the user has already accepted the cookies
+            var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    
+            if (!cookiesAccepted) {
+                cookiePopup.style.display = 'block';
+            }
+    
+            // Event listener for accept cookies button
+            acceptCookiesBtn.addEventListener('click', function() {
+                // Set a local storage item to remember that the user accepted cookies
+                localStorage.setItem('cookiesAccepted', 'true');
+                // Hide the cookie popup
+                cookiePopup.style.display = 'none';
+            });
         });
-    });
-</script>
+    </script>
+    
     
 
     <footer>
